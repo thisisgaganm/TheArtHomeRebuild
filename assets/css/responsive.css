@@ -1,0 +1,86 @@
+
+/* =========================================
+   PART 10 — RESPONSIVE REFINEMENTS
+========================================= */
+
+@media (max-width: 991px) {
+    html {
+        scroll-padding-top: 82px;
+    }
+
+    .site-header {
+        z-index: 1000;
+    }
+
+    .main-nav {
+        z-index: 999;
+    }
+
+    .main-nav.is-open {
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    .container,
+    .container-wide {
+        width: min(100% - 48px, 100%);
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-padding-top: 76px;
+    }
+
+    .container,
+    .container-wide {
+        width: calc(100% - 36px);
+    }
+
+    .section-pad {
+        padding-top: 76px;
+        padding-bottom: 76px;
+    }
+
+    .section-title {
+        font-size: clamp(32px, 8vw, 46px);
+        line-height: 1.15;
+    }
+
+    .section-description {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .btn {
+        min-height: 46px;
+    }
+
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container,
+    .container-wide {
+        width: calc(100% - 32px);
+    }
+
+    .section-pad {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .section-title {
+        font-size: clamp(29px, 9vw, 38px);
+    }
+
+    .btn {
+        padding: 13px 20px;
+        font-size: 11px;
+    }
+}

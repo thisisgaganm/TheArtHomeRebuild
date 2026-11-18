@@ -1,0 +1,207 @@
+
+/* =========================================
+   THE ART HOME — PART 11
+   LUXURY INTERACTIVE EXPERIENCE
+========================================= */
+
+/* Refined glass navbar */
+
+.site-header {
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease,
+        backdrop-filter 0.4s ease;
+}
+
+.site-header.is-scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* Page transition */
+
+body {
+    opacity: 1;
+}
+
+body.page-leaving {
+    pointer-events: none;
+}
+
+body.page-leaving main,
+body.page-leaving .site-header,
+body.page-leaving .site-footer {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+body.page-entering main,
+body.page-entering .site-header,
+body.page-entering .site-footer {
+    animation: luxuryPageEnter 0.55s ease both;
+}
+
+@keyframes luxuryPageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image interactions */
+
+.luxury-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.luxury-image img {
+    transition: transform 0.9s cubic-bezier(0.2, 0.65, 0.3, 1);
+    will-change: transform;
+}
+
+.luxury-image:hover img {
+    transform: scale(1.045);
+}
+
+/* Elegant link underline */
+
+.luxury-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.luxury-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.luxury-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Premium button interaction */
+
+.luxury-button {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.luxury-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Scroll reveal directions */
+
+html.luxury-animations-ready .reveal-left,
+html.luxury-animations-ready .reveal-right {
+    opacity: 0;
+    transition:
+        opacity 0.85s ease,
+        transform 0.85s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+html.luxury-animations-ready .reveal-left {
+    transform: translateX(-35px);
+}
+
+html.luxury-animations-ready .reveal-right {
+    transform: translateX(35px);
+}
+
+html.luxury-animations-ready .reveal-left.is-visible,
+html.luxury-animations-ready .reveal-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fine divider animation */
+
+.luxury-divider {
+    width: 100%;
+    height: 1px;
+    background: #E8E8E5;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 1s ease;
+}
+
+html.luxury-animations-ready .luxury-divider {
+    transform: scaleX(0);
+}
+
+.luxury-divider.is-visible {
+    transform: scaleX(1);
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    html.luxury-animations-ready .reveal-left,
+    html.luxury-animations-ready .reveal-right {
+        transform: translateY(22px);
+    }
+
+    .reveal-left.is-visible,
+    .reveal-right.is-visible {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 767px) {
+    body.page-leaving main,
+    body.page-leaving .site-header,
+    body.page-leaving .site-footer {
+        transform: none;
+    }
+
+    body.page-entering main,
+    body.page-entering .site-header,
+    body.page-entering .site-footer {
+        animation-duration: 0.35s;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    html.luxury-animations-ready .reveal-left,
+    html.luxury-animations-ready .reveal-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    body.page-entering main,
+    body.page-entering .site-header,
+    body.page-entering .site-footer {
+        animation: none;
+    }
+
+    .luxury-image img,
+    .luxury-link::after,
+    .luxury-button {
+        transition: none;
+    }
+}

@@ -1,0 +1,658 @@
+/* =====================================================
+   THE ART HOME INTERIORS
+   PART 02 — BRAND IDENTITY & DESIGN SYSTEM
+===================================================== */
+
+/* GOOGLE FONT VARIABLES */
+
+:root {
+    /* BRAND PALETTE */
+    --color-ivory: #FFFFFF;
+    --color-cream: #F3F3F0;
+    --color-beige: #D8CBB9;
+    --color-border: #E8E8E5;
+    --color-taupe: #A68B67;
+    --color-gold: #A68B67;
+    --color-gold-hover: #8D7352;
+    --color-charcoal: #242424;
+    --color-dark: #222222;
+    --color-white: #FFFFFF;
+
+    /* BACKGROUND COLORS */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F3F3F0;
+    --bg-light: #F8F8F6;
+    --bg-dark: #222222;
+
+    /* TEXT COLORS */
+    --text-primary: #242424;
+    --text-secondary: #777777;
+    --text-muted: #929292;
+    --text-light: #D0D0CC;
+    --text-white: #FFFFFF;
+
+    /* TYPOGRAPHY */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    /* FONT SIZES */
+    --text-xs: 11px;
+    --text-sm: 13px;
+    --text-base: 15px;
+    --text-lg: 18px;
+    --text-xl: 22px;
+    --text-2xl: 30px;
+    --text-3xl: 40px;
+    --text-4xl: 52px;
+    --text-5xl: 68px;
+    --text-6xl: 84px;
+
+    /* LAYOUT */
+    --container-width: 1320px;
+    --container-wide: 1440px;
+    --container-padding: 60px;
+
+    /* SECTION SPACING */
+    --section-space: 120px;
+    --section-space-small: 80px;
+
+    /* BORDERS */
+    --border-light: 1px solid var(--color-border);
+    --border-dark: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* SHADOWS */
+    --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.04);
+    --shadow-medium: 0 15px 45px rgba(0, 0, 0, 0.08);
+    --shadow-image: 0 20px 50px rgba(0, 0, 0, 0.10);
+
+    /* TRANSITIONS */
+    --transition-fast: 0.25s ease;
+    --transition-medium: 0.45s ease;
+    --transition-slow: 0.8s ease;
+
+    /* IMAGE RATIOS */
+    --image-wide: 16 / 9;
+    --image-landscape: 4 / 3;
+    --image-portrait: 3 / 4;
+    --image-square: 1 / 1;
+}
+
+
+/* =====================================================
+   RESET & BASE
+===================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+::selection {
+    background: var(--color-gold);
+    color: var(--color-white);
+}
+
+
+/* =====================================================
+   TYPOGRAPHY SYSTEM
+===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: clamp(42px, 5.6vw, 76px);
+    letter-spacing: -0.045em;
+}
+
+h2 {
+    font-size: clamp(34px, 4.2vw, 58px);
+    letter-spacing: -0.035em;
+}
+
+h3 {
+    font-size: clamp(24px, 2.4vw, 32px);
+    letter-spacing: -0.025em;
+}
+
+h4 {
+    font-size: 23px;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.text-serif {
+    font-family: var(--font-heading);
+}
+
+.text-sans {
+    font-family: var(--font-body);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+
+/* =====================================================
+   LAYOUT SYSTEM
+===================================================== */
+
+.container {
+    width: min(
+        calc(100% - 100px),
+        var(--container-width)
+    );
+    margin-inline: auto;
+}
+
+.container-wide {
+    width: min(
+        calc(100% - 100px),
+        var(--container-wide)
+    );
+    margin-inline: auto;
+}
+
+.section-pad {
+    padding-block: var(--section-space);
+}
+
+.section-pad-small {
+    padding-block: var(--section-space-small);
+}
+
+.section-light {
+    background: var(--bg-light);
+}
+
+.section-cream {
+    background: var(--bg-secondary);
+}
+
+.section-dark {
+    background: var(--bg-dark);
+    color: var(--text-white);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+    color: var(--text-white);
+}
+
+.section-dark p {
+    color: var(--text-light);
+}
+
+
+/* =====================================================
+   EDITORIAL SECTION HEADINGS
+===================================================== */
+
+.section-heading {
+    max-width: 750px;
+}
+
+.section-heading.centered {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    color: var(--color-gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.section-label::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--color-gold);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 4.5vw, 58px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+}
+
+.section-description {
+    max-width: 560px;
+    margin-top: 22px;
+    font-size: 14px;
+    line-height: 1.95;
+    color: var(--text-secondary);
+}
+
+
+/* =====================================================
+   BUTTON SYSTEM
+===================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 48px;
+    padding: 13px 25px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.btn-primary {
+    color: var(--color-white);
+    background: var(--color-charcoal);
+}
+
+.btn-primary:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    color: var(--color-charcoal);
+    background: transparent;
+    border-color: var(--color-charcoal);
+}
+
+.btn-outline:hover {
+    color: var(--color-white);
+    background: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+}
+
+.btn-light {
+    color: var(--color-charcoal);
+    background: var(--color-white);
+}
+
+.btn-light:hover {
+    color: var(--color-white);
+    background: var(--color-gold);
+}
+
+.btn-arrow {
+    font-size: 17px;
+    transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* =====================================================
+   EDITORIAL LINKS
+===================================================== */
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-gold);
+    color: var(--text-primary);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color var(--transition-fast);
+}
+
+.text-link:hover {
+    color: var(--color-gold);
+}
+
+.text-link span {
+    transition: transform var(--transition-fast);
+}
+
+.text-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =====================================================
+   IMAGE SYSTEM
+===================================================== */
+
+.image-wrap {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-cream);
+}
+
+.image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.image-wrap:hover img {
+    transform: scale(1.035);
+}
+
+.image-landscape {
+    aspect-ratio: var(--image-landscape);
+}
+
+.image-portrait {
+    aspect-ratio: var(--image-portrait);
+}
+
+.image-square {
+    aspect-ratio: var(--image-square);
+}
+
+.image-wide {
+    aspect-ratio: var(--image-wide);
+}
+
+
+/* =====================================================
+   EDITORIAL GRID SYSTEM
+===================================================== */
+
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+.grid-span-4 {
+    grid-column: span 4;
+}
+
+.grid-span-5 {
+    grid-column: span 5;
+}
+
+.grid-span-6 {
+    grid-column: span 6;
+}
+
+.grid-span-7 {
+    grid-column: span 7;
+}
+
+.grid-span-8 {
+    grid-column: span 8;
+}
+
+.grid-span-12 {
+    grid-column: span 12;
+}
+
+
+/* =====================================================
+   PROJECT INFORMATION
+===================================================== */
+
+.project-category {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--color-gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.project-description {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+
+/* =====================================================
+   DECORATIVE DETAILS
+===================================================== */
+
+.hairline {
+    width: 100%;
+    height: 1px;
+    background: rgba(41, 39, 34, 0.14);
+}
+
+.hairline-light {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.gold-line {
+    width: 45px;
+    height: 1px;
+    background: var(--color-gold);
+}
+
+.spacer-20 {
+    height: 20px;
+}
+
+.spacer-40 {
+    height: 40px;
+}
+
+.spacer-60 {
+    height: 60px;
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN SYSTEM
+===================================================== */
+
+@media (max-width: 1024px) {
+    :root {
+        --section-space: 90px;
+        --section-space-small: 65px;
+    }
+
+    .container,
+    .container-wide {
+        width: calc(100% - 60px);
+    }
+
+    .editorial-grid {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-space: 75px;
+        --section-space-small: 55px;
+    }
+
+    .container,
+    .container-wide {
+        width: calc(100% - 40px);
+    }
+
+    .editorial-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+    }
+
+    .grid-span-4,
+    .grid-span-5,
+    .grid-span-6,
+    .grid-span-7,
+    .grid-span-8 {
+        grid-column: span 6;
+    }
+
+    .section-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-space: 65px;
+        --section-space-small: 45px;
+    }
+
+    .container,
+    .container-wide {
+        width: calc(100% - 32px);
+    }
+
+    .section-label {
+        margin-bottom: 16px;
+        font-size: 9px;
+    }
+
+    .section-title {
+        font-size: clamp(34px, 10vw, 44px);
+    }
+
+    .btn {
+        min-height: 46px;
+        padding: 12px 20px;
+        font-size: 10px;
+    }
+
+    .editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .grid-span-4,
+    .grid-span-5,
+    .grid-span-6,
+    .grid-span-7,
+    .grid-span-8,
+    .grid-span-12 {
+        grid-column: span 1;
+    }
+}

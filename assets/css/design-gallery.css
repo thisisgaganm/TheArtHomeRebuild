@@ -1,0 +1,510 @@
+
+/* =========================================
+   PART 7 — DESIGN GALLERY
+   THE ART HOME INTERIORS
+========================================= */
+
+/* HERO */
+
+.design-page-hero {
+    padding: 35px 0 90px;
+    background: #fff;
+}
+
+.design-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: #999;
+    margin-bottom: 75px;
+}
+
+.design-breadcrumb a {
+    color: #777;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.design-breadcrumb a:hover {
+    color: #A68B67;
+}
+
+.design-hero-content {
+    max-width: 850px;
+    margin-bottom: 55px;
+}
+
+.design-hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 1.12;
+    font-weight: 400;
+    color: #242424;
+    margin: 25px 0;
+}
+
+.design-hero-content h1 span {
+    display: block;
+    font-style: italic;
+    color: #A68B67;
+}
+
+.design-hero-content p {
+    max-width: 540px;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.design-hero-image {
+    position: relative;
+    height: 590px;
+    overflow: hidden;
+    background: #f3f3f0;
+}
+
+.design-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.design-hero-image > span {
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0,0,0,.4);
+}
+
+
+/* INTRO */
+
+.design-intro {
+    background: #F8F8F6;
+}
+
+.design-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.design-intro-left h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 4vw, 55px);
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 22px;
+    color: #242424;
+}
+
+.design-intro-right p {
+    color: #777;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+
+/* PROJECTS */
+
+.design-projects {
+    background: #fff;
+}
+
+.design-section-heading {
+    max-width: 650px;
+    margin-bottom: 80px;
+}
+
+.design-section-heading h2,
+.design-details-heading h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 4.5vw, 58px);
+    line-height: 1.2;
+    font-weight: 400;
+    color: #242424;
+    margin: 20px 0;
+}
+
+.design-section-heading p,
+.design-details-heading p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 500px;
+}
+
+.design-project-row {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 90px;
+    align-items: center;
+    margin-bottom: 110px;
+}
+
+.design-project-row:last-child {
+    margin-bottom: 0;
+}
+
+.design-project-row.reverse {
+    grid-template-columns: .8fr 1.2fr;
+}
+
+.design-project-row.reverse .design-project-image {
+    order: 2;
+}
+
+.design-project-row.reverse .design-project-content {
+    order: 1;
+}
+
+.design-project-image {
+    height: 510px;
+    overflow: hidden;
+    background: #f3f3f0;
+}
+
+.design-project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.design-project-row:hover .design-project-image img {
+    transform: scale(1.035);
+}
+
+.design-project-content {
+    padding: 20px 0;
+}
+
+.design-project-number {
+    color: #A68B67;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.design-project-content h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(34px, 3.5vw, 48px);
+    line-height: 1.2;
+    font-weight: 400;
+    color: #242424;
+    margin: 25px 0;
+}
+
+.design-project-content p {
+    font-size: 14px;
+    line-height: 2;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.design-project-tag {
+    display: inline-block;
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+
+/* DETAILS */
+
+.design-details {
+    background: #F8F8F6;
+}
+
+.design-details-heading {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.design-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.detail-card {
+    min-width: 0;
+}
+
+.detail-image {
+    height: 310px;
+    overflow: hidden;
+    background: #e9e9e5;
+    margin-bottom: 22px;
+}
+
+.detail-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.detail-card:hover img {
+    transform: scale(1.04);
+}
+
+.detail-card > span {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    color: #A68B67;
+}
+
+.detail-card h3 {
+    font-family: var(--font-heading);
+    font-size: 25px;
+    font-weight: 400;
+    color: #242424;
+    margin-top: 12px;
+}
+
+
+/* QUOTE */
+
+.design-quote {
+    background: #222;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.design-quote .section-label {
+    color: #A68B67;
+}
+
+.design-quote blockquote {
+    max-width: 900px;
+    margin: 35px auto;
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 4.5vw, 60px);
+    line-height: 1.3;
+    font-weight: 400;
+    color: #fff;
+}
+
+.quote-line {
+    display: block;
+    width: 45px;
+    height: 1px;
+    background: #A68B67;
+    margin: 35px auto 20px;
+}
+
+.design-quote p {
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* NEXT COLLECTION */
+
+.design-next {
+    background: #fff;
+}
+
+.design-next-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.design-next-inner h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 400;
+    color: #242424;
+    margin: 20px 0 15px;
+}
+
+.design-next-inner p {
+    max-width: 490px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #777;
+}
+
+.design-next-link {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #A68B67;
+    padding-bottom: 12px;
+    color: #242424;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: color .3s;
+}
+
+.design-next-link:hover {
+    color: #A68B67;
+}
+
+.design-next-link span {
+    font-size: 18px;
+}
+
+
+/* CTA */
+
+.design-page-cta {
+    padding: 110px 0;
+    background: #F8F8F6;
+    text-align: center;
+}
+
+.design-page-cta .section-label {
+    color: #A68B67;
+}
+
+.design-page-cta h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.2;
+    font-weight: 400;
+    color: #242424;
+    margin: 25px 0 38px;
+}
+
+.design-page-cta h2 span {
+    display: block;
+    color: #A68B67;
+    font-style: italic;
+}
+
+.design-page-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+    .design-project-row,
+    .design-project-row.reverse {
+        gap: 45px;
+    }
+
+    .design-project-image {
+        height: 420px;
+    }
+
+    .detail-image {
+        height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .design-page-hero {
+        padding-top: 25px;
+    }
+
+    .design-breadcrumb {
+        margin-bottom: 50px;
+    }
+
+    .design-hero-image {
+        height: 420px;
+    }
+
+    .design-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .design-project-row,
+    .design-project-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 75px;
+    }
+
+    .design-project-row.reverse .design-project-image,
+    .design-project-row.reverse .design-project-content {
+        order: initial;
+    }
+
+    .design-project-image {
+        height: 430px;
+    }
+
+    .design-project-content {
+        padding: 0;
+    }
+
+    .design-details-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .detail-image {
+        height: 250px;
+    }
+
+    .design-next-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 540px) {
+    .design-hero-content h1 {
+        font-size: 46px;
+    }
+
+    .design-hero-image {
+        height: 310px;
+    }
+
+    .design-project-image {
+        height: 320px;
+    }
+
+    .design-project-content h3 {
+        font-size: 35px;
+    }
+
+    .design-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-image {
+        height: 290px;
+    }
+
+    .design-quote {
+        padding: 85px 0;
+    }
+
+    .design-page-cta {
+        padding: 80px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .design-project-image img,
+    .detail-image img {
+        transition: none;
+    }
+}

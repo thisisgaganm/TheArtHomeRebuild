@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the interior design and execution portfolio of The Art Home Interiors.">
+    <title>Our Gallery | The Art Home Interiors</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/luxury-experience.css">
+</head>
+
+<body>
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="siteLoader">
+        <div class="loader-content">
+            <span class="loader-brand">THE ART HOME</span>
+            <span class="loader-line"></span>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                <img src="assets/images/logo.png" alt="The Art Home Interiors" class="brand-logo">
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <a href="contact.html" class="header-cta">Let's Talk</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- GALLERY HERO -->
+        <section class="gallery-hero">
+            <div class="container gallery-hero-inner">
+
+                <div class="gallery-hero-content reveal">
+                    <span class="section-label">OUR PORTFOLIO</span>
+
+                    <h1>
+                        Spaces with a story.
+                        <span>Designed to inspire.</span>
+                    </h1>
+
+                    <p>
+                        A collection of thoughtfully designed spaces,
+                        considered details and interiors created around
+                        the way people live.
+                    </p>
+
+                    <a href="#galleryProjects" class="gallery-hero-link">
+                        EXPLORE OUR WORK
+                        <span>↓</span>
+                    </a>
+                </div>
+
+                <div class="gallery-hero-image reveal">
+                    <img src="assets/images/design-02.jpg"
+                         alt="Contemporary residential interior">
+                    <span class="hero-image-caption">01 — SELECTED INTERIORS</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PORTFOLIO INTRO -->
+        <section class="gallery-intro section-pad">
+            <div class="container gallery-intro-grid">
+
+                <span class="section-label reveal">A CLOSER LOOK</span>
+
+                <div class="gallery-intro-content reveal">
+                    <h2>
+                        Every space begins
+                        <span>with an idea.</span>
+                    </h2>
+
+                    <p>
+                        From the first design concept to the finishing details,
+                        explore the different ways we approach residential
+                        interiors. Each space reflects a balance of aesthetics,
+                        comfort and thoughtful functionality.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- GALLERY CATEGORY NAVIGATION -->
+        <section class="gallery-categories" id="galleryProjects">
+            <div class="container">
+
+                <div class="gallery-section-heading reveal">
+                    <div>
+                        <span class="section-label">THE COLLECTION</span>
+                        <h2>Our selected work</h2>
+                    </div>
+
+                    <p>Explore our approach to design and execution.</p>
+                </div>
+
+                <div class="gallery-filter-bar reveal" role="group" aria-label="Filter gallery projects">
+                    <button class="gallery-filter active" data-filter="all">All Work</button>
+                    <button class="gallery-filter" data-filter="living">Living Spaces</button>
+                    <button class="gallery-filter" data-filter="bedroom">Bedrooms</button>
+                    <button class="gallery-filter" data-filter="kitchen">Kitchens</button>
+                    <button class="gallery-filter" data-filter="dining">Dining</button>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <!-- PROJECT 1 -->
+                    <article class="gallery-item gallery-item-large reveal" data-category="living">
+                        <a href="design-gallery.html" class="gallery-image">
+                            <img src="assets/images/design-04.jpg" alt="Elegant living room interior" loading="lazy">
+                            <span class="gallery-image-overlay">
+                                <span>VIEW PROJECT <span>↗</span></span>
+                            </span>
+                        </a>
+                        <div class="gallery-item-info">
+                            <div>
+                                <span class="project-category">LIVING SPACES</span>
+                                <h3>Comfort in Every Detail</h3>
+                            </div>
+                            <span class="gallery-number">01</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2 -->
+                    <article class="gallery-item reveal" data-category="bedroom">
+                        <a href="design-gallery.html" class="gallery-image">
+                            <img src="assets/images/Mbedroom.png" alt="Calm and elegant bedroom design" loading="lazy">
+                            <span class="gallery-image-overlay">
+                                <span>VIEW PROJECT <span>↗</span></span>
+                            </span>
+                        </a>
+                        <div class="gallery-item-info">
+                            <div>
+                                <span class="project-category">BEDROOMS</span>
+                                <h3>A Place to Unwind</h3>
+                            </div>
+                            <span class="gallery-number">02</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3 -->
+                    <article class="gallery-item reveal" data-category="kitchen">
+                        <a href="design-gallery.html" class="gallery-image">
+                            <img src="assets/images/Kitchen.png" alt="Modern kitchen interior" loading="lazy">
+                            <span class="gallery-image-overlay">
+                                <span>VIEW PROJECT <span>↗</span></span>
+                            </span>
+                        </a>
+                        <div class="gallery-item-info">
+                            <div>
+                                <span class="project-category">KITCHENS</span>
+                                <h3>Function Meets Beauty</h3>
+                            </div>
+                            <span class="gallery-number">03</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 4 -->
+                    <article class="gallery-item gallery-item-large reveal" data-category="living">
+                        <a href="design-gallery.html" class="gallery-image">
+                            <img src="assets/images/home-feature.jpg" alt="Contemporary home interior" loading="lazy">
+                            <span class="gallery-image-overlay">
+                                <span>VIEW PROJECT <span>↗</span></span>
+                            </span>
+                        </a>
+                        <div class="gallery-item-info">
+                            <div>
+                                <span class="project-category">RESIDENTIAL INTERIORS</span>
+                                <h3>Designed Around Living</h3>
+                            </div>
+                            <span class="gallery-number">04</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 5 -->
+                    <article class="gallery-item reveal" data-category="dining">
+                        <a href="design-gallery.html" class="gallery-image">
+                            <img src="assets/images/design-01.jpg" alt="Refined dining room interior" loading="lazy">
+                            <span class="gallery-image-overlay">
+                                <span>VIEW PROJECT <span>↗</span></span>
+                            </span>
+                        </a>
+                        <div class="gallery-item-info">
+                            <div>
+                                <span class="project-category">DINING</span>
+                                <h3>Gather Around</h3>
+                            </div>
+                            <span class="gallery-number">05</span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- DESIGN AND EXECUTION -->
+        <section class="gallery-collections section-pad">
+            <div class="container">
+
+                <div class="gallery-section-heading reveal">
+                    <div>
+                        <span class="section-label">EXPLORE MORE</span>
+                        <h2>Our work, in detail.</h2>
+                    </div>
+                </div>
+
+                <div class="collection-grid">
+
+                    <a href="design-gallery.html" class="collection-card reveal">
+                        <div class="collection-image">
+                            <img src="assets/images/design-preview.jpg" alt="Interior design concept" loading="lazy">
+                            <span class="collection-arrow">↗</span>
+                        </div>
+                        <div class="collection-content">
+                            <span class="section-label">01 / CONCEPT & CREATIVITY</span>
+                            <h3>Design Gallery</h3>
+                            <p>
+                                Explore interior concepts, material choices,
+                                layouts and thoughtfully developed design ideas.
+                            </p>
+                            <span class="collection-link">EXPLORE DESIGN <span>→</span></span>
+                        </div>
+                    </a>
+
+                    <a href="execution-gallery.html" class="collection-card reveal">
+                        <div class="collection-image">
+                            <img src="assets/images/execution-preview.jpg" alt="Completed interior execution" loading="lazy">
+                            <span class="collection-arrow">↗</span>
+                        </div>
+                        <div class="collection-content">
+                            <span class="section-label">02 / FROM PLAN TO REALITY</span>
+                            <h3>Execution Gallery</h3>
+                            <p>
+                                Discover completed interior spaces and the
+                                craftsmanship behind bringing designs to life.
+                            </p>
+                            <span class="collection-link">EXPLORE EXECUTION <span>→</span></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FINAL CTA -->
+        <section class="gallery-cta">
+            <div class="container gallery-cta-inner reveal">
+                <span class="section-label">HAVE A SPACE IN MIND?</span>
+
+                <h2>
+                    Let's create something
+                    <span>meaningful together.</span>
+                </h2>
+
+                <a href="contact.html" class="btn btn-primary">
+                    START A CONVERSATION <span>↗</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="The Art Home Interiors" class="footer-logo">
+                </a>
+                <p>Thoughtfully designed spaces, created around the way you live.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Our Work</h4>
+                <a href="design-gallery.html">Design Gallery</a>
+                <a href="execution-gallery.html">Execution Gallery</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Get in Touch</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">Start a Project</a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© <span id="currentYear"></span> THE ART HOME INTERIORS. All rights reserved.</p>
+            <a href="index.html">Back to Home ↑</a>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/luxury-experience.js"></script>
+
+</body>
+</html>

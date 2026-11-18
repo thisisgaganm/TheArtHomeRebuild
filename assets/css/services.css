@@ -1,0 +1,667 @@
+
+/* =========================================
+   THE ART HOME INTERIORS
+   PART 04 — SERVICES PAGE
+========================================= */
+
+
+/* SERVICES HERO */
+
+.services-hero {
+    position: relative;
+    padding: 95px 6.5% 75px;
+    background: var(--bg-primary);
+    overflow: hidden;
+}
+
+.services-hero-content {
+    max-width: 1450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    align-items: center;
+    gap: 9%;
+}
+
+.services-hero-text {
+    padding-bottom: 35px;
+}
+
+.services-hero-text .section-label {
+    margin-bottom: 30px;
+}
+
+.services-hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(48px, 5.5vw, 76px);
+    line-height: 1.13;
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: var(--text-primary);
+    margin-bottom: 27px;
+}
+
+.services-hero-text h1 em {
+    color: var(--color-taupe);
+    font-weight: 400;
+}
+
+.services-hero-text p {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.95;
+    color: var(--text-secondary);
+    margin-bottom: 34px;
+}
+
+.services-hero-image {
+    height: 535px;
+    position: relative;
+    background: var(--color-beige);
+}
+
+.services-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.services-image-caption {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    text-shadow: 0 1px 8px rgba(0,0,0,.4);
+}
+
+.services-hero-bottom {
+    max-width: 1450px;
+    margin: 55px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    color: var(--text-muted);
+}
+
+
+/* INTRODUCTION */
+
+.services-intro {
+    background: var(--bg-light);
+}
+
+.services-intro-layout {
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    gap: 15%;
+    align-items: center;
+}
+
+.services-intro-heading .section-title {
+    font-size: clamp(43px, 5vw, 65px);
+    line-height: 1.2;
+    margin-top: 25px;
+}
+
+.services-intro-text p {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+
+/* MAIN SERVICES */
+
+.main-services {
+    background: var(--bg-primary);
+}
+
+.main-services-heading {
+    max-width: 700px;
+    margin-bottom: 80px;
+}
+
+.main-services-heading .section-title {
+    font-size: clamp(43px, 5vw, 66px);
+    line-height: 1.2;
+    margin-top: 22px;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 10%;
+    margin-bottom: 130px;
+}
+
+.service-detail:last-child {
+    margin-bottom: 0;
+}
+
+.service-detail-right {
+    grid-template-columns: .95fr 1.05fr;
+}
+
+.service-detail-right .service-detail-image {
+    order: 2;
+}
+
+.service-detail-right .service-detail-content {
+    order: 1;
+}
+
+.service-detail-image {
+    height: 570px;
+    position: relative;
+    overflow: hidden;
+    background: var(--color-beige);
+}
+
+.service-detail-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.service-detail-image:hover img {
+    transform: scale(1.035);
+}
+
+.service-image-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 30px;
+    text-shadow: 0 1px 8px rgba(0,0,0,.4);
+}
+
+.service-detail-content {
+    padding: 20px 0;
+}
+
+.service-eyebrow {
+    display: block;
+    color: var(--color-taupe);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.service-detail-content h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 4vw, 53px);
+    line-height: 1.2;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.service-lead {
+    font-family: var(--font-heading);
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--color-taupe);
+    margin-bottom: 20px;
+}
+
+.service-description {
+    font-size: 13px;
+    line-height: 1.95;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+}
+
+.service-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    border-top: 1px solid var(--color-border);
+}
+
+.service-feature-list li {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.service-feature-list li::before {
+    content: "—";
+    color: var(--color-gold);
+}
+
+
+/* ROOM DESIGN */
+
+.room-design {
+    background: var(--bg-secondary);
+}
+
+.room-design-heading {
+    max-width: 670px;
+    margin-bottom: 55px;
+}
+
+.room-design-heading .section-title {
+    font-size: clamp(43px, 5vw, 65px);
+    line-height: 1.2;
+    margin-top: 22px;
+}
+
+.room-design-heading > p {
+    max-width: 480px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    margin-top: 22px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 25px;
+}
+
+.room-card {
+    min-width: 0;
+}
+
+.room-card-image {
+    height: 310px;
+    overflow: hidden;
+    background: var(--color-beige);
+}
+
+.room-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .9s ease;
+}
+
+.room-card:hover .room-card-image img {
+    transform: scale(1.045);
+}
+
+.room-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 17px;
+    border-bottom: 1px solid var(--color-taupe);
+    padding-bottom: 14px;
+}
+
+.room-card-info h3 {
+    font-family: var(--font-heading);
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.room-card-info span {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.room-card-note {
+    background: var(--bg-primary);
+    padding: 30px;
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.room-note-number {
+    font-family: var(--font-heading);
+    font-size: 35px;
+    color: var(--color-taupe);
+}
+
+.room-card-note h3 {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.room-card-note p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+
+/* PROCESS */
+
+.services-process {
+    background: var(--bg-light);
+}
+
+.services-process-header {
+    max-width: 700px;
+    margin-bottom: 70px;
+}
+
+.services-process-header .section-title {
+    font-size: clamp(43px, 5vw, 65px);
+    line-height: 1.2;
+    margin-top: 22px;
+}
+
+.services-process-header > p {
+    max-width: 480px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    margin-top: 22px;
+}
+
+.services-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.services-process-item {
+    padding: 35px 25px 35px 0;
+    border-right: 1px solid var(--color-border);
+}
+
+.services-process-item:not(:first-child) {
+    padding-left: 25px;
+}
+
+.services-process-item:last-child {
+    border-right: 0;
+}
+
+.services-process-item > span {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    color: var(--color-taupe);
+}
+
+.services-process-item h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 25px 0 12px;
+}
+
+.services-process-item p {
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+
+/* CTA */
+
+.services-cta {
+    background: var(--bg-dark);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.services-cta-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.services-cta-content .section-label {
+    color: var(--text-light);
+}
+
+.services-cta-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(43px, 5.5vw, 72px);
+    line-height: 1.2;
+    font-weight: 400;
+    color: var(--color-white);
+    margin: 25px 0;
+}
+
+.services-cta-content h2 em {
+    color: var(--color-beige);
+    font-weight: 400;
+}
+
+.services-cta-content > p {
+    color: #C4C4C0;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .services-hero-content {
+        gap: 6%;
+    }
+
+    .services-hero-image {
+        height: 450px;
+    }
+
+    .service-detail {
+        gap: 7%;
+    }
+
+    .service-detail-image {
+        height: 480px;
+    }
+
+    .room-card-image {
+        height: 260px;
+    }
+
+    .room-card-note {
+        min-height: 320px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .services-hero {
+        padding: 70px 6% 55px;
+    }
+
+    .services-hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .services-hero-text h1 {
+        font-size: clamp(48px, 9vw, 66px);
+    }
+
+    .services-hero-image {
+        height: 440px;
+    }
+
+    .services-intro-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .main-services-heading {
+        margin-bottom: 55px;
+    }
+
+    .service-detail,
+    .service-detail-right {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 90px;
+    }
+
+    .service-detail-image {
+        height: 420px;
+    }
+
+    .service-detail-content h3 {
+        font-size: 38px;
+    }
+
+    .service-lead {
+        font-size: 18px;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .room-card-image {
+        height: 290px;
+    }
+
+    .room-card-note {
+        min-height: 340px;
+    }
+
+    .services-process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-process-item {
+        padding: 30px 20px 30px 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .services-process-item:nth-child(even) {
+        padding-left: 20px;
+        border-right: 0;
+    }
+
+    .services-process-item:nth-child(3),
+    .services-process-item:nth-child(4) {
+        border-bottom: 0;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .services-hero {
+        padding-top: 50px;
+    }
+
+    .services-hero-text h1 {
+        font-size: 48px;
+        letter-spacing: -1px;
+    }
+
+    .services-hero-image {
+        height: 340px;
+    }
+
+    .services-hero-bottom {
+        margin-top: 35px;
+        font-size: 8px;
+        gap: 15px;
+    }
+
+    .services-intro-heading .section-title,
+    .main-services-heading .section-title,
+    .room-design-heading .section-title,
+    .services-process-header .section-title {
+        font-size: 43px;
+    }
+
+    .service-detail,
+    .service-detail-right {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 75px;
+    }
+
+    .service-detail-right .service-detail-image {
+        order: 1;
+    }
+
+    .service-detail-right .service-detail-content {
+        order: 2;
+    }
+
+    .service-detail-image {
+        height: 390px;
+    }
+
+    .service-detail-content {
+        padding: 0;
+    }
+
+    .service-detail-content h3 {
+        font-size: 42px;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .room-card-image {
+        height: 350px;
+    }
+
+    .room-card-note {
+        min-height: 300px;
+    }
+
+    .services-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-process-item,
+    .services-process-item:not(:first-child),
+    .services-process-item:nth-child(even) {
+        padding: 25px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .services-process-item:last-child {
+        border-bottom: 0;
+    }
+
+    .services-process-item h3 {
+        margin-top: 15px;
+    }
+
+    .services-cta {
+        padding: 85px 0;
+    }
+
+    .services-cta-content h2 {
+        font-size: 44px;
+    }
+
+}

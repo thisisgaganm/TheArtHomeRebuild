@@ -1,0 +1,91 @@
+/* =====================================================
+   PART 02 — ANIMATION SYSTEM
+===================================================== */
+
+/* Reveal animation */
+
+.reveal,
+.reveal-left,
+.reveal-right {
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+html.reveal-ready .reveal,
+html.reveal-ready .reveal-left,
+html.reveal-ready .reveal-right {
+    opacity: 0;
+}
+
+html.reveal-ready .reveal {
+    transform: translateY(25px);
+}
+
+html.reveal-ready .reveal-left {
+    transform: translateX(-25px);
+}
+
+html.reveal-ready .reveal-right {
+    transform: translateX(25px);
+}
+
+html.reveal-ready .reveal.is-visible,
+html.reveal-ready .reveal-left.is-visible,
+html.reveal-ready .reveal-right.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* Staggered reveal */
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+
+/* Image hover */
+
+.image-hover {
+    overflow: hidden;
+}
+
+.image-hover img {
+    transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.image-hover:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    html.reveal-ready .reveal,
+    html.reveal-ready .reveal-left,
+    html.reveal-ready .reveal-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .reveal-delay-1,
+    .reveal-delay-2,
+    .reveal-delay-3 {
+        transition-delay: 0s;
+    }
+
+    .image-hover img {
+        transition: none;
+    }
+}
